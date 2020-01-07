@@ -1,0 +1,48 @@
+body {margin: 0;}
+
+nav {
+    float: right;
+    position: relative;
+    bottom: 25px;
+}
+
+nav button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+header {
+    background-color: black; 
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+header p {margin: 0;}
+
+h1 {font-size: 36px;}
+h2 {font-size: 30px; color: black; text-align: center;}
+p {padding: 10px;}
+
+.splash-screen {
+    padding: 20% 30% 20% 30%;
+    text-align: center;
+    background-image: url(img/bar-image.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+
+}
+
+.splash-screen p,h1 { color: white;}
+.splash-screen p {font-size: 32px;}
+
+.splash-screen button {
+    color: #d0cfcf;
+    background-color: black;
+    padding: 15px 20px 15px 20px;
+    border: #d0cfcf 1px solid;
+    font-size: 20px;
+}
+
