@@ -1,17 +1,15 @@
 body {margin: 0;}
 
-nav button {
-    background-color: transparent;
+nav p {
     color: white;
-    border: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    widows: 100vw;
+    width: 100%;
     background-color: black; 
     color: white;
     padding: 10px;
@@ -24,13 +22,16 @@ iframe {width: 100%;}
 
 h1 {font-size: 36px;}
 h2 {font-size: 30px; color: black; text-align: center;}
-p {padding: 1em;}
-a {text-align: center; color: coral;}
+section p {padding: 1em;}
+h2 + p {text-align: center;}
+section a {text-align: center; color: coral;}
 footer {
     display: flex;
     align-items: center;
    justify-content: center;
 }
+
+.desktopnav p {display: inline-block;}
 
 .splash-screen {
     display: flex;
@@ -74,4 +75,48 @@ footer {
 
 .grid3.gallery :last-child {
     grid-column: 1/-1;
+}
+
+
+.mobilenav {display: none;}
+
+/* media queries */
+@media all and (max-width: 460px) {
+    .grid2 {grid-template-columns: 1fr; margin: 0;}
+    .grid3 {grid-template-columns: 1fr;}
+    .desktopnav {display: none;}
+    .mobilenav {display: block;}
+
+    .hamburger {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .hamburger-content {
+        display: none;
+        position: absolute;
+        right:0;
+        z-index:1;
+        background-color: black;
+      }
+      
+      .hamburger:hover .hamburger-content {
+        display: block;
+      /* animation: popup .5s ease-in-out both; */
+      }
+      
+      .hamburger span {
+        transition: transform .5s;
+      -webkit-transition: -webkit-transform .5s;
+        display: block;
+        transform: rotate(90deg);
+      }
+      
+      .hamburger:hover span {
+        transition: transform .5s;
+      -webkit-transition: -webkit-transform .5s;
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+      
 }
